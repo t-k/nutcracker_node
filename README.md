@@ -2,8 +2,11 @@ nutcracker - a node.js [nutcracker(twemproxy)](https://github.com/twitter/twempr
 ====
 
 nutcracker has a limitation on available commands (e.g., "info", "keys").
+
 https://github.com/twitter/twemproxy/blob/master/notes/redis.md
+
 You cannot use [node_redis](https://github.com/mranney/node_redis) as it is.
+
 This module wraps these unavailable commands, and if these commands were called, return warning message and errors.
 
 Usage
