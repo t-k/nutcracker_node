@@ -11,7 +11,7 @@
     "node": ">= 0.6.0"
   },
   "dependencies": {
-    "node-redis": "*"
+    "redis": "*"
   },
   "devDependencies": {
     "coffee-script": ">= 1.3",
