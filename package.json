@@ -1,0 +1,30 @@
+{
+  "author": "Tatsuo Kaniwa <tatsuo@kaniwa.biz>",
+  "name": "nutcracker",
+  "description": "Node.js client library for the nutcracker.",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "dependencies": {
+    "node-redis": "*"
+  },
+  "devDependencies": {
+    "coffee-script": ">= 1.3",
+    "mocha": "*"
+  },
+  "keywords": [
+    "redis",
+    "nutcracker",
+    "twemproxy"
+  ],
+  "readmeFilename": "README.md",
+  "directories": {
+    "test": "test"
+  },
+  "license": "MIT"
+}
