@@ -23,7 +23,7 @@ nutcracker = require "nutcracker"
 client = nutcracker.createClient(22121, "127.0.0.1")
 
 client.set("string key", "string val", nutcracker.print)
-client.keys("*", redis.print)
+client.keys("*", nutcracker.print)
 # => Error: Error: nutcracker: cannot use keys command
 # => false
 
