@@ -2,7 +2,7 @@ redis = require "redis"
 net = require "net"
 default_port = 22121
 default_host = "127.0.0.1"
-commands = ["keys", "migrate", "move", "object", "randomkey", "rename", "renamenx", "sort", "bitop", "mget", "mset", "blpop", "brpop", "brpoplpush", "psubscribe", "publish", "punsubscribe", "subscribe", "unsubscribe", "discard", "exec", "multi", "unwatch", "watch", "auth", "echo", "ping", "quit", "select", "script exists", "script flush", "script kill", "script load", "bgrewriteaof", "bgsave", "client kill", "client list", "config get", "config set", "config resetstat", "dbsize", "debug object", "debug segfault", "flushall", "flushdb", "info", "lastsave", "monitor", "save", "shutdown", "slaveof", "slowlog", "sync", "time"]
+NA_COMMANDS = ["keys", "migrate", "move", "object", "randomkey", "rename", "renamenx", "sort", "bitop", "mget", "mset", "hscan", "blpop", "brpop", "brpoplpush", "sscan", "zscan", "psubscribe", "publish", "punsubscribe", "subscribe", "unsubscribe", "discard", "exec", "multi", "unwatch", "watch", "auth", "echo", "ping", "quit", "select", "script exists", "script flush", "script kill", "script load", "bgrewriteaof", "bgsave", "client kill", "client list", "config get", "config set", "config resetstat", "dbsize", "debug object", "debug segfault", "flushall", "flushdb", "info", "lastsave", "monitor", "save", "scan", "shutdown", "slaveof", "slowlog", "sync", "time"]
 
 on_info_cmd = (err, res) ->
   if err
@@ -19,7 +19,7 @@ exports.createClient = (port_arg, host_arg, options) ->
   redis_client.port = port
   redis_client.host = host
   redis_client.on_info_cmd = on_info_cmd
-  commands.forEach (cmd) ->
+  NA_COMMANDS.forEach (cmd) ->
     if cmd == "info"
       fn = (array, callback) ->
         console.warn("nutcracker: cannot use " + cmd + " command");
